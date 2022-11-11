@@ -20,6 +20,15 @@ source ~/.bash_profile
 git clone -b v1.2.0 gitopia://gitopia/gitopia
 cd gitopia && make install
 
+GITOPIA_PORT=41
+echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
+if [ ! $WALLET ]; then
+	echo "export WALLET=wallet" >> $HOME/.bash_profile
+fi
+echo "export GITOPIA_CHAIN_ID=gitopia-janus-testnet-2" >> $HOME/.bash_profile
+echo "export GITOPIA_PORT=${GITOPIA_PORT}" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
 gitopiad config chain-id $GITOPIA_CHAIN_ID
 gitopiad config keyring-backend test
 gitopiad config node tcp://localhost:${GITOPIA_PORT}657
