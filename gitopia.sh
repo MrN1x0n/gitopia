@@ -18,6 +18,7 @@ echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
 source ~/.bash_profile
 
 curl https://github.com/MrN1x0n/gitopia/raw/main/gitopia-helper.sh | bash
+sudo mv /tmp/tmpinstalldir/git-remote-gitopia /tmp/tmpinstalldir/git-gitopia /usr/local/bin
 
 
 git clone -b v1.2.0 gitopia://gitopia/gitopia
