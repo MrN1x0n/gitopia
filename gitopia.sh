@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install -y make gcc
+sudo apt-get install make curl build-essential git wget jq make gcc tmux chrony -y
 
 if ! [ -x "$(command -v go)" ]; then
   ver="1.19.2"
