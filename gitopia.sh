@@ -17,7 +17,7 @@ mkdir -p $HOME/go/bin
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
 source ~/.bash_profile
 
-curl https://get.gitopia.com | bash
+curl https://github.com/MrN1x0n/gitopia/raw/main/gitopia-helper.sh | bash
 
 
 git clone -b v1.2.0 gitopia://gitopia/gitopia
